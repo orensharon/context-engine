@@ -1,0 +1,59 @@
+query: {
+	id,
+	value,
+	createdAt
+	systemPrompt
+}
+
+
+message: {
+	id,
+	timestamp
+	role: "user|system",
+	value
+}
+
+
+document: {
+	id,
+	createdAt,
+	subjectId,
+	title,
+	keywords: []?
+	value
+}
+
+chat: {
+	id,
+	title,
+	messages: []
+}
+
+systemPrompts: {
+	id,
+	title,
+	default,
+	createdAt,
+	value
+}
+
+subject: {
+	id,
+	key
+}
+
+
+
+*****************************************
+
+* Rational database per context (MA/bible)
+
+	* Vector db per context or per app?
+	
+	* Embbeding for documents or for history too?
+
+	* Embbeding per document or per subject
+	
+* Shard documents: context, chuncking
+
+* Should we model and store meta data to the embedding
